@@ -4,15 +4,16 @@ import { Pressable, Text, Alert, StyleSheet } from 'react-native';
 type ListenItemProps = {
     label: string;
     text?: string;
+    onClick?: (() => void);
 }
 
 export default class ListenItem extends Component<ListenItemProps> {
   render() {
-    const { text, label } = this.props;
+    const { text, label, onClick } = this.props;
     return (
       <>
         <Pressable
-          onPress={() => Alert.alert("test", "this a press test")}
+          onPress={onClick}
           style={({ pressed }) => [
               styles.listenItem,
               {
