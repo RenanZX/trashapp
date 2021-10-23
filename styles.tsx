@@ -7,6 +7,29 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  absoluteView: {
+    flex: 1,
+    position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'transparent'
+  },
+  btn_main_first: {
+    width: 80, 
+    height: 80,
+    resizeMode: 'contain'
+  },
+  btn_main: { 
+    width: 80, 
+    height: 80,
+    marginLeft: 30,
+    resizeMode: 'contain'
+  },
+  btn_menu: { 
+    width: 80, 
+    height: 80,
+    resizeMode: 'contain'
+  },
 });
 
 const primary_button_color = "#66A865";
