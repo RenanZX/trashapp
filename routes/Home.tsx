@@ -2,10 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import { DrawerScreenProps } from '@react-navigation/drawer';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Image, NavigationScreenProp, Alert, AppRegistry } from 'react-native';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
 import { styles, primary_button_color } from '../styles';
+import { NavigationScreenProp } from 'react-navigation';
 import {RootStackParamList} from '../types';
 import { State } from 'react-native-gesture-handler';
+import MenuButton from './MenuButton';
 
 const Tree = require('../assets/images/tree.png');
 const Mapa = require('../assets/images/mapa_main_opt.png')
@@ -14,7 +16,6 @@ const Dicas = require('../assets/images/dicas_main_opt.png')
 const DicasReuso = require('../assets/images/dicasreuso_main_opt.png')
 const Doacao = require('../assets/images/doacaovenda_main_opt.png')
 const Ideias = require('../assets/images/ideias_main_opt.png')
-const Menu = require('../assets/images/button_menu.png')
 
 
 export interface Props {
@@ -43,10 +44,7 @@ class Home extends React.Component<Props, object, State> {
   render(){
     return(
     <View style={styles.container}>
-      <TouchableOpacity style={{position: 'absolute',left: 0,right: 0, top:0}} onPress={() => this.props.navigation.openDrawer()}>
-        <Image style={styles.btn_menu} source={Menu}/>
-      </TouchableOpacity>
-
+      <MenuButton/>
       <Text style={{ fontSize: 45, fontWeight: 'bold' }}>Olá fulano</Text>
       <Image source={Tree} style={{ width: 250, height: 250, resizeMode: 'contain' }}/>
       <Text style={{ fontSize: 25, fontWeight: 'bold' }}>Nivel 1</Text>
