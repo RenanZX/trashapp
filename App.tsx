@@ -32,13 +32,13 @@ export default function App() {
      <Drawer.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Mapa" component={Mapa} />
-      <Drawer.Screen name="Feedback" component={Feedback} />
-      <Drawer.Screen name="Report" component={Report} />
       <Drawer.Screen name="Noticias" component={Noticias} />
       <Drawer.Screen name="DicasDescarte" component={DicasDescarte} />
       <Drawer.Screen name="DicasReuso" component={DicasReuso} />
       <Drawer.Screen name="DoacoesVendas" component={DoacoesVendas} />
       <Drawer.Screen name="Ideias" component={Ideias} />
+      <Drawer.Screen name="Feedback" component={Feedback} />
+      <Drawer.Screen name="Report" component={Report} />
      </Drawer.Navigator>
     </NavigationContainer>
   );
