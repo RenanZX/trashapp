@@ -1,26 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { DrawerScreenProps } from '@react-navigation/drawer';
 import { StyleSheet, Text, View, Button, Alert, AppRegistry } from 'react-native';
 import { styles, primary_button_color } from '../styles';
+import {RootStackParamList} from '../types';
 
-type RootStackParamList = {
-  Home: undefined;
-  Feedback: undefined;
-  Report: undefined;
-  Mapa: undefined;
-  Noticias: undefined;
-  DicasDescarte: undefined;
-  DicasReuso: undefined;
-  DoacoesVendas: undefined;
-  Ideias: undefined;
-};
+type Props = DrawerScreenProps<RootStackParamList, 'Home'>;
 
-type mainScreenProp = DrawerNavigationProp<RootStackParamList, 'Home'>;
-
-function Home() {
-  const navigation = useNavigation<mainScreenProp>();
+function Home({navigation}: Props) {
   return(
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>

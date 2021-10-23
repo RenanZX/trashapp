@@ -1,9 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, AppRegistry } from 'react-native';
+import { AppRegistry } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer, DarkTheme } from '@react-navigation/native';
-
+import { NavigationContainer } from '@react-navigation/native';
+import {RootStackParamList} from './types';
 
 import Home from './routes/Home';
 import Feedback from './routes/Feedback';
@@ -25,7 +24,25 @@ AppRegistry.registerComponent('DicasReuso', () => DicasReuso)
 AppRegistry.registerComponent('DoacoesVendas', () => DoacoesVendas)
 AppRegistry.registerComponent('Ideias', () => Ideias)
 
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator<RootStackParamList>();
+
+export default function App() {
+  return (
+    <NavigationContainer theme={Theme}>
+     <Drawer.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+      <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Mapa" component={Mapa} />
+      <Drawer.Screen name="Feedback" component={Feedback} />
+      <Drawer.Screen name="Report" component={Report} />
+      <Drawer.Screen name="Noticias" component={Noticias} />
+      <Drawer.Screen name="DicasDescarte" component={DicasDescarte} />
+      <Drawer.Screen name="DicasReuso" component={DicasReuso} />
+      <Drawer.Screen name="DoacoesVendas" component={DoacoesVendas} />
+      <Drawer.Screen name="Ideias" component={Ideias} />
+     </Drawer.Navigator>
+    </NavigationContainer>
+  );
+}
 
 const Theme = {
   dark: false,
@@ -38,21 +55,3 @@ const Theme = {
     notification: 'rgb(255, 69, 58)',
   },
 };
-
-export default function App() {
-  return (
-    <NavigationContainer theme={Theme}>
-     <Drawer.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
-      <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Mapa" component={Mapa} />
-      <Drawer.Screen name="Feedback" component={Feedback} />
-      <Drawer.Screen name="Reportar" component={Report} />
-      <Drawer.Screen name="Noticias" component={Noticias} />
-      <Drawer.Screen name="DicasDescarte" component={DicasDescarte} />
-      <Drawer.Screen name="DicasReuso" component={DicasReuso} />
-      <Drawer.Screen name="DoacoesVendas" component={DoacoesVendas} />
-      <Drawer.Screen name="Ideias" component={Ideias} />
-     </Drawer.Navigator>
-    </NavigationContainer>
-  );
-}
