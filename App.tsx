@@ -3,6 +3,7 @@ import { AppRegistry } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import {RootStackParamList} from './types';
+import {NavigationScreenProp} from 'react-navigation';
 
 import Home from './routes/Home';
 import Feedback from './routes/Feedback';
@@ -14,6 +15,11 @@ import DicasReuso from './routes/DicasReuso'
 import DoacoesVendas from './routes/DoacoesVendas'
 import Ideias from './routes/Ideias'
 import MenuButton from './buttons/MenuButton'
+import ListenItem from './components/ListItem'
+
+export interface Props {
+  navigation: NavigationScreenProp<RootStackParamList,'Home'>
+};
 
 AppRegistry.registerComponent('Feedback', () => Feedback)
 AppRegistry.registerComponent('Report', () => Report)
@@ -25,6 +31,7 @@ AppRegistry.registerComponent('DicasReuso', () => DicasReuso)
 AppRegistry.registerComponent('DoacoesVendas', () => DoacoesVendas)
 AppRegistry.registerComponent('Ideias', () => Ideias)
 AppRegistry.registerComponent('MenuButton', () => MenuButton)
+AppRegistry.registerComponent('ListenItem', () => ListenItem)
 
 const Drawer = createDrawerNavigator<RootStackParamList>();
 

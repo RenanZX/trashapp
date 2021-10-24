@@ -14,6 +14,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'transparent'
   },
+  title_view: {
+    position: 'absolute', 
+    left:60, 
+    top:95, 
+    fontSize: 30, 
+    fontWeight: 'bold'
+  },
   btn_main_first: {
     width: 80, 
     height: 80,

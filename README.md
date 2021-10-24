@@ -15,5 +15,5 @@ Agora utilize o comando ```npm install``` para instalar as bibliotecas necessár
 ### Execução
 
 1. Utilize o comando ```npm start``` ou ```expo start```, será aberto uma página no navegador.
-2. Abra o aplicativo expo e em seguida clique na opção de Scan QR Code, aponte a câmara do seu celular para a o QR code que aparece no navegador.
+2. Abra o aplicativo expo e em seguida clique na opção de Scan QR Code, aponte a câmara do seu celular para o QR code que aparece no navegador.
 3. O Aplicativo será carregado no seu telefone e você poderá utilizá-lo.

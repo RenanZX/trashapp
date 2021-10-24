@@ -1,14 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {useNavigation} from '@react-navigation/native';
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import { Text, View, TouchableOpacity, Image } from 'react-native';
 import { styles, primary_button_color } from '../styles';
-import { NavigationScreenProp } from 'react-navigation';
-import {RootStackParamList} from '../types';
 import { State } from 'react-native-gesture-handler';
 import MenuButton from '../buttons/MenuButton';
 import * as Progress from 'react-native-progress';
+import {Props} from '../App'
 
 const Tree = require('../assets/images/tree.png');
 const Mapa = require('../assets/images/mapa_main_opt.png')
@@ -17,11 +15,6 @@ const Dicas = require('../assets/images/dicas_main_opt.png')
 const DicasReuso = require('../assets/images/dicasreuso_main_opt.png')
 const Doacao = require('../assets/images/doacaovenda_main_opt.png')
 const Ideias = require('../assets/images/ideias_main_opt.png')
-
-
-export interface Props {
-  navigation: NavigationScreenProp<RootStackParamList,'Home'>
-};
 
 class Home extends React.Component<Props, object, State> {
   constructor(props: Props){

@@ -7,7 +7,8 @@ type ListenItemProps = {
     onClick?: (() => void);
 }
 
-export default class ListenItem extends Component<ListenItemProps> {
+
+export default class ListenItem extends Component<any, ListenItemProps> {
   render() {
     const { text, label, onClick } = this.props;
     return (
