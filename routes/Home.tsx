@@ -7,7 +7,7 @@ import { styles, primary_button_color } from '../styles';
 import { NavigationScreenProp } from 'react-navigation';
 import {RootStackParamList} from '../types';
 import { State } from 'react-native-gesture-handler';
-import MenuButton from './MenuButton';
+import MenuButton from '../buttons/MenuButton';
 
 const Tree = require('../assets/images/tree.png');
 const Mapa = require('../assets/images/mapa_main_opt.png')
@@ -44,7 +44,7 @@ class Home extends React.Component<Props, object, State> {
   render(){
     return(
     <View style={styles.container}>
-      <MenuButton/>
+      <MenuButton navigation={this.props.navigation}/>
       <Text style={{ fontSize: 45, fontWeight: 'bold' }}>Olá fulano</Text>
       <Image source={Tree} style={{ width: 250, height: 250, resizeMode: 'contain' }}/>
       <Text style={{ fontSize: 25, fontWeight: 'bold' }}>Nivel 1</Text>

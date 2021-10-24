@@ -13,6 +13,7 @@ import DicasDescarte from './routes/DicasDescarte'
 import DicasReuso from './routes/DicasReuso'
 import DoacoesVendas from './routes/DoacoesVendas'
 import Ideias from './routes/Ideias'
+import MenuButton from './buttons/MenuButton'
 
 AppRegistry.registerComponent('Feedback', () => Feedback)
 AppRegistry.registerComponent('Report', () => Report)
@@ -23,6 +24,7 @@ AppRegistry.registerComponent('DicasDescarte', () => DicasDescarte)
 AppRegistry.registerComponent('DicasReuso', () => DicasReuso)
 AppRegistry.registerComponent('DoacoesVendas', () => DoacoesVendas)
 AppRegistry.registerComponent('Ideias', () => Ideias)
+AppRegistry.registerComponent('MenuButton', () => MenuButton)
 
 const Drawer = createDrawerNavigator<RootStackParamList>();
 
