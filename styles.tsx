@@ -5,6 +5,12 @@ const general_background_color = "#C8EEAB";
 
 const primary_button_color = "#66A865";
 
+const colors = {
+  gray: '#808080',
+  black: '#000',
+  white: '#FFF',
+  red: '#FF8F6B'
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -92,4 +98,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export  { styles, primary_button_color, general_background_color };
+export  { styles, primary_button_color, general_background_color, colors };
