@@ -34,16 +34,16 @@ const styles = StyleSheet.create({
   listenItem: {
     paddingRight: 15,
     paddingLeft: 15,
-    paddingBottom: 3,
-    paddingTop: 6,
-    width: "80%",
+    paddingBottom: 9,
+    paddingTop: 10,
+    width: 320,
     borderRadius: 5,
     marginBottom: 3,
     marginTop: 3
   },
 
   text: {
-    fontSize: 16,
+    fontSize: 15,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "normal",
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "normal",
-    fontSize: 19,
+    fontSize: 18,
     lineHeight: 12,
     display: "flex",
     textShadowOffset: {

@@ -1,5 +1,11 @@
 import { StyleSheet } from 'react-native';
 
+
+const general_background_color = "#C8EEAB";
+
+const primary_button_color = "#66A865";
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -9,36 +15,81 @@ const styles = StyleSheet.create({
   },
   absoluteView: {
     flex: 1,
-    position: 'absolute',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'transparent'
+    position: "absolute",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "transparent",
   },
   title_view: {
-    position: 'absolute', 
-    left:60, 
-    top:95, 
-    fontSize: 30, 
-    fontWeight: 'bold'
+    position: "absolute",
+    left: 60,
+    top: 95,
+    fontSize: 30,
+    fontWeight: "bold",
   },
   btn_main_first: {
-    width: 80, 
+    width: 80,
     height: 80,
-    resizeMode: 'contain'
+    resizeMode: "contain",
   },
-  btn_main: { 
-    width: 80, 
+  btn_main: {
+    width: 80,
     height: 80,
     marginLeft: 30,
-    resizeMode: 'contain'
+    resizeMode: "contain",
   },
-  btn_menu: { 
-    width: 80, 
+  btn_menu: {
+    width: 80,
     height: 80,
-    resizeMode: 'contain'
+    resizeMode: "contain",
+  },
+  textTitlePage: {
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    fontSize: 24,
+    display: "flex",
+    textAlign: "center",
+    top: 95,
+  },
+  textTitlePopup: {
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    fontSize: 24,
+    display: "flex",
+    textAlign: "center",
+  },
+  contentView: {
+    height: "73%",
+  },
+  headerView: {
+    height: "20%",
+  },
+  footerView: {
+    height: "7%",
+    display: "flex",
+    alignItems: "center",
+    alignContent: "space-around",
+  },
+  primaryButton: {
+    width: 100,
+    height: 40,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    resizeMode: "contain",
+    borderRadius: 6,
+    backgroundColor: primary_button_color,
+  },
+  primaryButtonText: {
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: 15,
+    lineHeight: 18,
+    textAlign: "center",
   },
 });
 
-const primary_button_color = "#66A865";
-
-export  { styles, primary_button_color };
+export  { styles, primary_button_color, general_background_color };
