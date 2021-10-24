@@ -7,13 +7,14 @@ import { NavigationScreenProp } from 'react-navigation';
 import {RootStackParamList} from '../types';
 import {Props} from '../App';
 import AddButton from "../buttons/AddButton";
+import FormIdeia from "../forms/FormIdeia";
 
 function Ideias({navigation}: Props) {
     return (
         <View style={styles.container}>
             <MenuButton navigation={navigation}/>
             <Text style={styles.title_view}>Ideias Sustentáveis</Text>
-            <ListenItem/>
+            <FormIdeia navigation={navigation}/>
             <AddButton navigation={navigation} screen='Home'/>
         </View>
     );
