@@ -8,6 +8,7 @@ import { NavigationScreenProp } from 'react-navigation';
 import {RootStackParamList} from '../types';
 import { State } from 'react-native-gesture-handler';
 import MenuButton from '../buttons/MenuButton';
+import * as Progress from 'react-native-progress';
 
 const Tree = require('../assets/images/tree.png');
 const Mapa = require('../assets/images/mapa_main_opt.png')
@@ -48,7 +49,9 @@ class Home extends React.Component<Props, object, State> {
       <Text style={{ fontSize: 45, fontWeight: 'bold' }}>Olá fulano</Text>
       <Image source={Tree} style={{ width: 250, height: 250, resizeMode: 'contain' }}/>
       <Text style={{ fontSize: 25, fontWeight: 'bold' }}>Nivel 1</Text>
-
+      <View style={{ marginBottom: 20, marginTop: 20 }}>
+        <Progress.Bar color='#83C082' unfilledColor='#C4C4C4' borderRadius={5} progress={0.3} width={250} height={20} />
+      </View>
       <View style={{ flexDirection: 'row' }}>
         { this.state.menuMap[0].map((item, index) =>
           <TouchableOpacity key={index} onPress={ item[1] }>
