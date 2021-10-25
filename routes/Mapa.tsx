@@ -10,6 +10,7 @@ import { string } from "yargs";
 const Adicao = require('../assets/images/adicao_button.png')
 const Search = require('../assets/images/searchIcon.png')
 const Pin = require('../assets/images/pinIcon.png')
+const UnableAdicao = require('../assets/images/adicao_button_unable.png')
 
 const mapstyles = StyleSheet.create({
     rbutton: {
@@ -56,8 +57,25 @@ class Mapa extends React.Component<Props> {
         },
         list: [],
         marker: null,
+        enable: false,
         title: undefined,
         text: undefined
+    }
+
+    renderButton(){
+        if(!this.state.enable){
+            return(
+                <RectButton>
+                    <Image style={mapstyles.rbutton} source={UnableAdicao} />
+                </RectButton>
+            );
+        }else{
+            return(
+                <RectButton onPress={() => this.setState({ text: "", title: "" })}>
+                    <Image style={mapstyles.rbutton} source={Adicao} />
+                </RectButton>
+            );
+        }
     }
 
     render(){
@@ -68,7 +86,7 @@ class Mapa extends React.Component<Props> {
                     provider={PROVIDER_GOOGLE}
                     style={styles.map}
                     initialRegion={this.state.region}
-                    onPress={(e) => this.setState({ marker: e.nativeEvent.coordinate })}>
+                    onPress={(e) => this.setState({ marker: e.nativeEvent.coordinate, enable: true })}>
                     {
                           this.state.marker &&
                           <Marker image={Pin} coordinate={this.state.marker} />
@@ -111,9 +129,7 @@ class Mapa extends React.Component<Props> {
                   </View>
                 </Modal>
                 <View style={mapstyles.footer}>
-                    <RectButton onPress={() => this.setState({ text: "", title: "" })}>
-                        <Image style={mapstyles.rbutton} source={Adicao} />
-                    </RectButton>
+                    {this.renderButton()}
                 </View>
                 
             </View>
