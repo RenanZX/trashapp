@@ -96,6 +96,13 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     textAlign: "center",
   },
+  basicFormView: {
+    backgroundColor: general_background_color,
+    margin: 40,
+    padding: 30,
+    borderRadius: 10,
+    flex: 1,
+  },
 });
 
 export  { styles, primary_button_color, general_background_color, colors };
