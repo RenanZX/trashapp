@@ -13,7 +13,7 @@ type State = {
 const style_form = StyleSheet.create({
   input_text: {
     backgroundColor: colors.white, 
-    width: 250, 
+    width: '100%', 
     marginBottom: 10, 
     borderColor: colors.gray, 
     borderWidth: 2, 
@@ -66,7 +66,7 @@ class FormIdeia extends Component<FormProps, State> {
             />
           </View>
 
-          <View style={{flex:1}}>
+          <View style={{flex:1, marginLeft: 10}}>
             <Button
               color={colors.red}
               onPress={onCancelar}
