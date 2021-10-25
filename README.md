@@ -1,5 +1,8 @@
 # Trashapp
 
+## Link do projeto
+[Github](https://github.com/RenanZX/trashapp)
+
 ## Guia de Desenvolvimento
 
 ### Instalação
