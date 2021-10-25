@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: "normal",
     fontSize: 18,
-    lineHeight: 12,
+    lineHeight: 17,
     display: "flex",
     textShadowOffset: {
       width: 2,

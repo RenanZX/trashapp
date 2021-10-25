@@ -7,14 +7,13 @@ import AddButton from "../buttons/AddButton";
 type State = {
   title: string;
   text: string;
-  adicionar: boolean
 }
 
 
 const style_form = StyleSheet.create({
   input_text: {
     backgroundColor: colors.white, 
-    width: 250, 
+    width: '100%', 
     marginBottom: 10, 
     borderColor: colors.gray, 
     borderWidth: 2, 
@@ -22,21 +21,24 @@ const style_form = StyleSheet.create({
   }
 })
 
-class FormIdeia extends Component<Props, State> {
+interface FormProps extends Props {
+  onConfirm: (text: string, title: string) => void;
+  onCancelar: () => void;
+}
 
-  constructor(props: Props){
+class FormIdeia extends Component<FormProps, State> {
+
+  constructor(props: FormProps){
     super(props)
   }
 
   state = {
-    title: '',
-    text: '',
-    adicionar: false
+    title: "",
+    text: "",
   }
 
   render() {
-    const{adicionar} = this.state
-    if(adicionar != null && adicionar == true){
+    const { onConfirm, onCancelar } = this.props;
       return(
       <View>
         <Text style={{ fontWeight: 'bold' }}>Titulo:</Text>
@@ -57,24 +59,23 @@ class FormIdeia extends Component<Props, State> {
           <View style={{flex:1}}>
             <Button
               color={primary_button_color}
-              onPress={()=>{}}
+              onPress={() => {
+                  onConfirm.call(this, this.state.text, this.state.title);
+              }}
               title="Compartilhar"
             />
           </View>
 
-          <View style={{flex:1}}>
+          <View style={{flex:1, marginLeft: 10}}>
             <Button
               color={colors.red}
-              onPress={()=>this.setState({adicionar: false})}
+              onPress={onCancelar}
               title="Cancelar"
             />
           </View>
         </View>
       </View>
       );
-    }else{
-      return (<AddButton func={() => this.setState({adicionar: true})} />);
-    }
   }
 
 }

@@ -7,8 +7,8 @@ const Adicao = require('../assets/images/adicao_button.png')
 
 export default function AddButton({func} : any) {
   return (
-    <TouchableOpacity style={{ position: 'absolute', right: 25, bottom: 45 }} onPress={ func }>
-      <Image style={{width: 75, height: 75, resizeMode: 'contain' }} source={Adicao} />
+    <TouchableOpacity style={{position: "absolute", left: 99, bottom: 25}} onPress={ func }>
+      <Image style={{width: 60, height: 60, resizeMode: 'contain' }} source={Adicao} />
     </TouchableOpacity>
   );
 }
