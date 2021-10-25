@@ -120,7 +120,7 @@ class Mapa extends React.Component<Props> {
                             if(this.state.marker != null){
                                 this.state.list.push([title, text, this.state.marker])
                             }
-                            this.setState({title:undefined, text: undefined})
+                            this.setState({title:undefined, text: undefined, enable: false})
                         }}
                         onCancelar={() => this.setState({title: undefined, text: undefined})}
                         navigation={this.props.navigation}
